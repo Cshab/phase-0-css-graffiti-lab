@@ -17,10 +17,11 @@ describe("css/cleanup.css", () => {
     const fileExists = fs.existsSync(
       path.resolve(__dirname, "..", "css/cleanup.css")
     );
+
     const hint = "The cleanup.css file must exist";
     expect(fileExists, hint).to.be.true;
   });
-
+  
   it("has overrides added", () => {
     const fileData = fs.statSync(
       path.resolve(__dirname, "..", "css/cleanup.css")
